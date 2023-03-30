@@ -1,0 +1,27 @@
+{
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "trailingComma": "all",
+  "printWidth": 120,
+  "arrowParens": "always",
+  "endOfLine": "auto",
+  "bracketSameLine": false,
+  "importOrderParserPlugins": ["typescript", "jsx"],
+  "importOrder": [
+    "^react",
+    "^[a-z_\\-]+",
+    "<THIRD_PARTY_MODULES>",
+    "^@apis/(.*)$",
+    "^@assets/(.*)$",
+    "^@components/(.*)$",
+    "^@contexts/(.*)$",
+    "^@@types/(.*)$",
+    "^@styles/(.*)$",
+    "^@utils/(.*)$",
+    "^@hooks/(.*)$",
+    "^~"
+  ],
+  "importOrderSortSpecifiers": true
+}
