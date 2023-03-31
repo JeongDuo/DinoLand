@@ -5,4 +5,12 @@ echo '🧪 Checking format, linting and types...';
 
 cd frontend
 
+echo '🧪 Checking types...';
+
+yarn type-check ||
+(
+  echo '❌ Typescript type checking failed';
+  false;
+)
+
 yarn lint-staged
