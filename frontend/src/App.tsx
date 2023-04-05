@@ -1,5 +1,7 @@
+import '@styles/global.scss';
+
 function App() {
-  return <div className='App'>DINO LAND</div>;
+  return <div>DINO LAND</div>;
 }
 
 export default App;
