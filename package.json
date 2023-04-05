@@ -9,7 +9,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "frontend/src/**/*.{ts,tsx,js,jsx}": [
+    "frontend/src/**/*.{ts,tsx}": [
       "eslint --config frontend/.eslintrc.cjs --fix",
       "prettier --config frontend/.prettierrc --cache --write",
       "tsc --pretty --noEmit"
