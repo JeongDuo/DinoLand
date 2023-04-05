@@ -1,0 +1,6 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo '🧪 Checking format, linting and types...';
+
+yarn lint-staged
