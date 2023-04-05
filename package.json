@@ -1,0 +1,29 @@
+{
+  "devDependencies": {
+    "eslint": "^8.37.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.0",
+    "prettier": "^2.8.7"
+  },
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "frontend/src/**/*.{ts,tsx,js,jsx}": [
+      "eslint --config frontend/.eslintrc.cjs --fix",
+      "prettier --config frontend/.prettierrc --cache --write",
+      "tsc --pretty --noEmit"
+    ],
+    "backend/src/**/*.ts": [
+      "eslint --config backend/.eslintrc.json --fix",
+      "prettier --config backend/.prettierrc --cache --write",
+      "tsc --pretty --noEmit"
+    ],
+    "frontend/src/**/*.{json,md}": [
+      "prettier --config frontend/.prettierrc --cache --write"
+    ],
+    "backend/src/**/*.{json,md}": [
+      "prettier --config backend/.prettierrc --cache --write"
+    ]
+  }
+}
