@@ -1,0 +1,33 @@
+@mixin display-flex($direction: row, $justify: flex-start, $align: flex-start) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin ellipsis($line: 1) {
+  @if ($line == 1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+  }
+}
+
+@mixin background($url, $x, $y, $width, $height) {
+  background-image: url($url);
+  background-position: $x $y;
+  background-size: $width $height;
+}
+
+@mixin font($size: $font-size-body, $weight: $font-weight-regular, $color: $color-black2) {
+  font-size: $size;
+  line-height: map-get($map: $size-to-line-height, $key: $size);
+  font-weight: $weight;
+  color: $color;
+}
