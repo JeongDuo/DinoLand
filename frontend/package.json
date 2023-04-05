@@ -12,15 +12,6 @@
     "type-check": "tsc --pretty --noEmit",
     "prepare": "cd .. && husky install frontend/.husky"
   },
-  "lint-staged": {
-    "./src/**/*.{js,jsx,ts,tsx}": [
-      "npm run format",
-      "npm run lint:fix"
-    ],
-    "*.{json,md}": [
-      "npm run format"
-    ]
-  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
