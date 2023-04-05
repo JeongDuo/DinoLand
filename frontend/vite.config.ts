@@ -10,7 +10,10 @@ export default defineConfig({
       scss: {
         includePaths: ['./src/styles'],
         additionalData: `
+              @import "_mixins.scss";
+              @import "_variables.scss";
               @import "_colors.scss";
+              @import "_typographies.scss";
             `,
       },
     },

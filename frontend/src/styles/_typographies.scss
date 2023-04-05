@@ -1,0 +1,30 @@
+$display: 56px;
+$h1: 40px;
+$h2: 36px;
+$h3: 32px;
+$h4: 28px;
+$h5: 24px;
+$h6: 20px;
+$title: 18px;
+$sub-title: 16px;
+$body: 14px;
+$description: 12px;
+$caption: 11px;
+
+$size-to-line-height: (
+  56px: 74px,
+  40px: 56px,
+  36px: 48px,
+  32px: 44px,
+  28px: 40px,
+  24px: 34px,
+  20px: 28px,
+  18px: 24px,
+  16px: 22px,
+  14px: 20px,
+  12px: 18px,
+  11px: 14px,
+);
+
+$regular: 400;
+$bold: 800;
