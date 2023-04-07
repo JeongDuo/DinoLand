@@ -1,0 +1,13 @@
+.button {
+  @include font($h2, $bold, $brown);
+  font-family: 'DeliusUnicase';
+  letter-spacing: 2px;
+  background-image: url('../../assets/rectangle-background.png');
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border: none;
+  width: 250px;
+  height: 80px;
+}
