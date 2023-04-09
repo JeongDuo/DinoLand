@@ -1,0 +1,12 @@
+export { ReactComponent as arrowLeft } from 'assets/icons/arrow-left.svg';
+export { ReactComponent as arrowRight } from 'assets/icons/arrow-right.svg';
+export { ReactComponent as chat } from 'assets/icons/chat.svg';
+export { ReactComponent as menu } from 'assets/icons/menu.svg';
+export { ReactComponent as mikeOff } from 'assets/icons/mike-off.svg';
+export { ReactComponent as mikeOn } from 'assets/icons/mike-on.svg';
+export { ReactComponent as musicOff } from 'assets/icons/music-off.svg';
+export { ReactComponent as musicOn } from 'assets/icons/music-on.svg';
+export { ReactComponent as shareOff } from 'assets/icons/share-off.svg';
+export { ReactComponent as shareOn } from 'assets/icons/share-on.svg';
+export { ReactComponent as videoOff } from 'assets/icons/video-off.svg';
+export { ReactComponent as videoOn } from 'assets/icons/video-on.svg';
