@@ -5,7 +5,6 @@
     "paths": {
       "@/*": ["*"],
       "@apis": ["apis/*"],
-      "@assets": ["assets/*"],
       "@components/*": ["components/*"],
       "@constants": ["constants/*"],
       "@contexts": ["contexts/*"],
