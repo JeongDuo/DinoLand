@@ -1,8 +1,16 @@
+import { useState } from 'react';
+import { Input } from './components/Input';
 import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
 import '@styles/global.scss';
 
 function App() {
+  const [name, setName] = useState('');
+
+  const onChangeInput: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+    setName(e.target.value);
+  };
+
   return (
     <div style={{ background: 'gray' }}>
       <div>DINO LAND</div>
@@ -24,6 +32,7 @@ function App() {
       <Button type='close' width={32} height={32} />
       <Button type='hexagon' width={48} height={48} />
       <Button type='square' width={48} height={48} />
+      <Input value={name} onChange={onChangeInput} placeholder='이름을 입력하세요(3~15자)' />
     </div>
   );
 }
