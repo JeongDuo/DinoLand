@@ -25,9 +25,14 @@
   background-size: $width $height;
 }
 
-@mixin font($size: $font-size-body, $weight: $font-weight-regular, $color: $color-black2) {
+@mixin font($size: $body, $weight: $regular, $color: $black2) {
   font-size: $size;
   line-height: map-get($map: $size-to-line-height, $key: $size);
   font-weight: $weight;
   color: $color;
+}
+
+@mixin border($line-width: 1px, $line-style: solid, $line-color: $black, $radius: 0) {
+  border: $line-width $line-style $line-color;
+  border-radius: $radius;
 }
