@@ -157,6 +157,11 @@ a {
   color: inherit;
 }
 
+input,
+textarea {
+  outline: none;
+}
+
 button,
 input {
   cursor: pointer;
