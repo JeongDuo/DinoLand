@@ -1,0 +1,23 @@
+.input {
+  @include font($h5, $regular, $brown);
+  @include border($line-width: 2px, $line-color: $brown, $radius: 20px);
+  display: block;
+  text-align: center;
+  background-color: rgba($light-brown, 0.5);
+  width: 500px;
+  height: 80px;
+  padding: 20px;
+
+  &::placeholder {
+    color: $brown;
+  }
+  &::-ms-input-placeholder {
+    color: $brown;
+  }
+  &::-webkit-input-placeholder {
+    color: $brown;
+  }
+  &::-moz-placeholder {
+    color: $brown;
+  }
+}
