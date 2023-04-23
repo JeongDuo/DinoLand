@@ -7,10 +7,11 @@ interface Props {
   type: ButtonType;
   width?: string | number;
   height?: string | number;
+  className?: string;
   onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
-function Button({ children, type, width, height, onClick }: Props) {
+function Button({ children, type, width, height, onClick, className }: Props) {
   const style = {
     backgroundImage: `url(${ASSETS_PATH}${type}.png)`,
     width,
@@ -18,7 +19,7 @@ function Button({ children, type, width, height, onClick }: Props) {
   };
 
   return (
-    <button type='button' className={styles.button} style={style} onClick={onClick}>
+    <button type='button' className={`${styles.button} ${className}`} style={style} onClick={onClick}>
       {children}
     </button>
   );
