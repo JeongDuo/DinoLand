@@ -1,7 +1,8 @@
 import { useState } from 'react';
-import { Input } from './components/Input';
 import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
+import { Input } from '@components/Input';
+import { Modal } from '@components/Modal';
 import '@styles/global.scss';
 
 function App() {
@@ -9,6 +10,17 @@ function App() {
 
   const onChangeInput: React.ChangeEventHandler<HTMLInputElement> = (e) => {
     setName(e.target.value);
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const onToggleModal = () => setIsOpen((prev) => !prev);
+
+  const onConfirm = (e: React.MouseEvent<HTMLButtonElement>) => {
+    alert(e);
+  };
+
+  const onCancel = () => {
+    alert('정성윤 바보');
   };
 
   return (
@@ -33,6 +45,18 @@ function App() {
       <Button type='hexagon' width={48} height={48} />
       <Button type='square' width={48} height={48} />
       <Input value={name} onChange={onChangeInput} placeholder='이름을 입력하세요(3~15자)' />
+      <Modal
+        isOpen={isOpen}
+        onClose={onToggleModal}
+        confirm='CHOICE'
+        cancel='CANCEL'
+        onConfirm={onConfirm}
+        onCancel={onCancel}
+        title='공지사항'
+      ></Modal>
+      <button onClick={onToggleModal} style={{ background: 'red' }}>
+        modal on
+      </button>
     </div>
   );
 }
