@@ -1,5 +1,6 @@
-import { Button } from '../Button';
 import styles from './Modal.module.scss';
+import { Button } from '@components/Button';
+import { Portal } from '@components/Portal';
 
 interface Props {
   isOpen: boolean;
@@ -14,7 +15,7 @@ interface Props {
 
 function Modal({ isOpen, onClose, title, children, confirm, cancel, onConfirm, onCancel }: Props) {
   return isOpen ? (
-    <>
+    <Portal>
       <div className={styles.dimmed} onClick={onClose} />
       <div className={styles.wrapper}>
         <Button type='close' onClick={onClose} width={40} height={40} className={styles['close-button']} />
@@ -33,7 +34,7 @@ function Modal({ isOpen, onClose, title, children, confirm, cancel, onConfirm, o
           )}
         </div>
       </div>
-    </>
+    </Portal>
   ) : null;
 }
 

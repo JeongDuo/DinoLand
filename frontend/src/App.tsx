@@ -3,7 +3,6 @@ import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
 import { Input } from '@components/Input';
 import { Modal } from '@components/Modal';
-import { Portal } from '@components/Portal';
 import '@styles/global.scss';
 
 function App() {
@@ -46,17 +45,15 @@ function App() {
       <Button type='hexagon' width={48} height={48} />
       <Button type='square' width={48} height={48} />
       <Input value={name} onChange={onChangeInput} placeholder='이름을 입력하세요(3~15자)' />
-      <Portal>
-        <Modal
-          isOpen={isOpen}
-          onClose={onToggleModal}
-          confirm='CHOICE'
-          cancel='CANCEL'
-          onConfirm={onConfirm}
-          onCancel={onCancel}
-          title='공지사항'
-        ></Modal>
-      </Portal>
+      <Modal
+        isOpen={isOpen}
+        onClose={onToggleModal}
+        confirm='CHOICE'
+        cancel='CANCEL'
+        onConfirm={onConfirm}
+        onCancel={onCancel}
+        title='공지사항'
+      ></Modal>
       <button onClick={onToggleModal} style={{ background: 'red' }}>
         modal on
       </button>
