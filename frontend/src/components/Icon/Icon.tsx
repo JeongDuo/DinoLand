@@ -6,13 +6,14 @@ interface Props {
   icon: IconType;
   color?: string;
   size?: string | number;
+  className?: string;
 }
 
-function Icon({ icon, color, size }: Props) {
+function Icon({ icon, color, size, className }: Props) {
   /*eslint import/namespace: ['error', { allowComputed: true }]*/
   const SVGIcon = icons[icon];
 
-  return <SVGIcon style={{ fill: color || 'currentColor', width: size, height: 'auto' }} />;
+  return <SVGIcon className={className} style={{ fill: color || 'currentColor', width: size, height: 'auto' }} />;
 }
 
 export default Icon;

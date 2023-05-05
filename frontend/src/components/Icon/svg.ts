@@ -1,6 +1,7 @@
 export { ReactComponent as arrowLeft } from 'assets/icons/arrow-left.svg';
 export { ReactComponent as arrowRight } from 'assets/icons/arrow-right.svg';
 export { ReactComponent as chat } from 'assets/icons/chat.svg';
+export { ReactComponent as close } from 'assets/icons/close.svg';
 export { ReactComponent as menu } from 'assets/icons/menu.svg';
 export { ReactComponent as mikeOff } from 'assets/icons/mike-off.svg';
 export { ReactComponent as mikeOn } from 'assets/icons/mike-on.svg';
