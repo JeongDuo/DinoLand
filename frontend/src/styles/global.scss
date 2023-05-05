@@ -1,18 +1,31 @@
 @font-face {
   font-family: 'Pretendard';
-  src: url('../assets/fonts/Pretendard-Regular.woff2') format('woff2'),
-    url('../assets/fonts/Pretendard-Bold.woff2') format('woff2');
-  font-weight: normal;
   font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Pretendard-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../assets/fonts/Pretendard-Bold.woff2') format('woff2');
 }
 
 @font-face {
   font-family: 'DeliusUnicase';
-  src: url('../assets/fonts/DeliusUnicase-Regular.woff2') format('woff2'),
-    url('../assets/fonts/DeliusUnicase-Bold.woff2') format('woff2');
-  font-weight: normal;
   font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/DeliusUnicase-Regular.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'DeliusUnicase';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../assets/fonts/DeliusUnicase-Bold.woff2') format('woff2');
+}
+
 * {
   font-family: 'Pretendard';
   box-sizing: border-box;
@@ -172,8 +185,29 @@ select,
 textarea,
 button {
   color: inherit;
+  font: inherit;
+}
+
+input::placeholder {
+  color: $gray3;
+}
+input::-webkit-input-placeholder {
+  color: $gray3;
+}
+input:-ms-input-placeholder {
+  color: $gray3;
+}
+
+textarea::placeholder {
+  color: $gray3;
+}
+textarea::-webkit-input-placeholder {
+  color: $gray3;
+}
+textarea:-ms-input-placeholder {
+  color: $gray3;
 }
 
 body {
-  background-color: #d5d5d5;
+  background-color: gray;
 }
