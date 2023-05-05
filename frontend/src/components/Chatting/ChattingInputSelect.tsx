@@ -2,7 +2,7 @@ import { MouseEvent, useEffect, useRef, useState } from 'react';
 import styles from './Chatting.module.scss';
 import { CHATTING_INPUT_TYPE } from '@/constants';
 import { ChattingInputType } from '@/types';
-import { isChattingInputType } from '@/utils/type.guard';
+import { isChattingInputType } from '@/utils/util.type.guard';
 
 interface Props {
   type: ChattingInputType;
