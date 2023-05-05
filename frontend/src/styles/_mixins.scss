@@ -36,3 +36,12 @@
   border: $line-width $line-style $line-color;
   border-radius: $radius;
 }
+
+@mixin scroll($direction: y) {
+  overflow-#{$direction}: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

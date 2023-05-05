@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Chatting } from './components/Chatting';
 import { Button } from '@components/Button';
 import { Icon } from '@components/Icon';
 import { Input } from '@components/Input';
@@ -24,7 +25,7 @@ function App() {
   };
 
   return (
-    <div style={{ background: 'gray' }}>
+    <div>
       <div>DINO LAND</div>
       <Icon icon='arrowLeft' color='yellow' />
       <Icon icon='arrowRight' color='yellow' />
@@ -44,7 +45,7 @@ function App() {
       <Button type='close' width={32} height={32} />
       <Button type='hexagon' width={48} height={48} />
       <Button type='square' width={48} height={48} />
-      <Input value={name} onChange={onChangeInput} placeholder='이름을 입력하세요(3~15자)' />
+      <Input value={name} onChange={onChangeInput} placeholder='이름을 입력하세요(3~10자)' />
       <Modal
         isOpen={isOpen}
         onClose={onToggleModal}
@@ -57,6 +58,7 @@ function App() {
       <button onClick={onToggleModal} style={{ background: 'red' }}>
         modal on
       </button>
+      <Chatting />
     </div>
   );
 }
