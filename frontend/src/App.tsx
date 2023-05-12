@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { Chatting } from './components/Chatting';
 import { Button } from '@components/Button';
+import { Chatting } from '@components/Chatting';
 import { Icon } from '@components/Icon';
 import { Input } from '@components/Input';
+import { Logo } from '@components/Logo';
 import { Modal } from '@components/Modal';
 import '@styles/global.scss';
 
@@ -59,6 +60,7 @@ function App() {
         modal on
       </button>
       <Chatting />
+      <Logo />
     </div>
   );
 }
