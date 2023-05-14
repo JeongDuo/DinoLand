@@ -30,7 +30,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'react/prop-types': 'off',
     'react/jsx-filename-extension': ['warn', { extensions: ['js', 'jsx', '.ts', '.tsx'] }],
-    'react/jsx-props-no-spreading': ['warn', { custom: 'ignore' }],
+    'react/jsx-props-no-spreading': ['off'],
     'react/react-in-jsx-scope': 'off',
     'react/jsx-uses-react': 'off',
     'react-hooks/exhaustive-deps': 'warn',
