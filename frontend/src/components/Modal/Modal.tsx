@@ -1,16 +1,17 @@
+import { MouseEventHandler, ReactNode } from 'react';
 import styles from './Modal.module.scss';
 import { Button } from '@components/Button';
 import { Portal } from '@components/Portal';
 
 interface Props {
+  children?: ReactNode;
   isOpen: boolean;
-  onClose: React.MouseEventHandler;
   title?: string;
-  children?: React.ReactNode;
   confirm?: string;
   cancel?: string;
-  onConfirm?: React.MouseEventHandler;
-  onCancel?: React.MouseEventHandler;
+  onClose: MouseEventHandler;
+  onConfirm?: MouseEventHandler;
+  onCancel?: MouseEventHandler;
 }
 
 function Modal({ isOpen, onClose, title, children, confirm, cancel, onConfirm, onCancel }: Props) {

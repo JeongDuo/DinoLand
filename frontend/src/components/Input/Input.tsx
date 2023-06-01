@@ -1,10 +1,11 @@
+import { ChangeEventHandler } from 'react';
 import styles from './Input.module.scss';
 
 interface Props {
   value: string;
   placeholder?: string;
   className?: string;
-  onChange: React.ChangeEventHandler<HTMLInputElement>;
+  onChange: ChangeEventHandler<HTMLInputElement>;
 }
 
 function Input({ value, placeholder = '이름을 입력하세요', className, onChange }: Props) {
