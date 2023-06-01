@@ -1,6 +1,5 @@
 import { ComponentPropsWithoutRef } from 'react';
 import styles from './Button.module.scss';
-import { ASSETS_PATH } from '@/constants';
 import { ButtonType } from '@/types';
 
 interface Props extends Omit<ComponentPropsWithoutRef<'button'>, 'type'> {
@@ -11,7 +10,7 @@ interface Props extends Omit<ComponentPropsWithoutRef<'button'>, 'type'> {
 
 function Button({ children, type, width, height, className, ...props }: Props) {
   const style = {
-    backgroundImage: `url(${ASSETS_PATH}${type}.png)`,
+    backgroundImage: `url(/assets/${type}.png)`,
     width,
     height,
   };
