@@ -2,32 +2,43 @@
   font-family: 'Pretendard';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/Pretendard-Regular.woff2') format('woff2');
+  font-display: swap;
+  src: local('Pretendard Regular') url('../assets/fonts/Pretendard-Regular.subset.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Regular.subset.woff2');
 }
 
 @font-face {
   font-family: 'Pretendard';
   font-style: normal;
-  font-weight: 800;
-  src: url('../assets/fonts/Pretendard-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  src: local('Pretendard Bold'), url('../assets/fonts/Pretendard-Bold.subset.woff2') format('woff2'),
+    url('../assets/fonts/Pretendard-Bold.subset.woff') format('woff');
 }
 
 @font-face {
   font-family: 'DeliusUnicase';
   font-style: normal;
   font-weight: 400;
-  src: url('../assets/fonts/DeliusUnicase-Regular.woff2') format('woff2');
+  font-display: swap;
+  src: local('Delius Unicase Regular'), url('../assets/fonts/DeliusUnicase-Regular.woff2') format('woff2'),
+    url('../assets/fonts/DeliusUnicase-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'DeliusUnicase';
   font-style: normal;
-  font-weight: 800;
-  src: url('../assets/fonts/DeliusUnicase-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-display: swap;
+  src: local('Delius Unicase Bold'), url('../assets/fonts/DeliusUnicase-Bold.woff2') format('woff2'),
+    url('../assets/fonts/DeliusUnicase-Bold.woff') format('woff');
 }
 
 * {
-  font-family: 'Pretendard';
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
+    'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif;
+  // font-family: 'Pretendard', sans-serif;
   box-sizing: border-box;
 }
 
