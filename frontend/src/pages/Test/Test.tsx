@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { ChangeEventHandler, MouseEvent, useState } from 'react';
 import { Icon } from '@/components/Icon';
 import { Input } from '@/components/Input';
 import { Button } from '@components/Button';
@@ -10,14 +10,14 @@ import '@styles/global.scss';
 function Test() {
   const [name, setName] = useState('');
 
-  const onChangeInput: React.ChangeEventHandler<HTMLInputElement> = (e) => {
+  const onChangeInput: ChangeEventHandler<HTMLInputElement> = (e) => {
     setName(e.target.value);
   };
 
   const [isOpen, setIsOpen] = useState(false);
   const onToggleModal = () => setIsOpen((prev) => !prev);
 
-  const onConfirm = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const onConfirm = (e: MouseEvent<HTMLButtonElement>) => {
     alert(e);
   };
 

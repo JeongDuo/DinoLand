@@ -1,12 +1,12 @@
-import { MouseEvent, useEffect, useRef, useState } from 'react';
+import { Dispatch, MouseEventHandler, SetStateAction, useEffect, useRef, useState } from 'react';
 import styles from './Chatting.module.scss';
 import { CHATTING_INPUT_TYPE } from '@/constants';
 import { ChattingInputType } from '@/types';
-import { isChattingInputType } from '@/utils/util.type.guard';
+import { isChattingInputType } from '@/utils/type.guard';
 
 interface Props {
   type: ChattingInputType;
-  setType: React.Dispatch<React.SetStateAction<ChattingInputType>>;
+  setType: Dispatch<SetStateAction<ChattingInputType>>;
 }
 
 function ChattingInputSelect({ type, setType }: Props) {
@@ -27,12 +27,12 @@ function ChattingInputSelect({ type, setType }: Props) {
     return () => document.removeEventListener('click', handleOutsideClose);
   }, [open]);
 
-  const onToggleSelect = (e: MouseEvent<HTMLButtonElement>) => {
+  const onToggleSelect: MouseEventHandler<HTMLButtonElement> = (e) => {
     e.preventDefault();
     setOpen((prev) => !prev);
   };
 
-  const onChangeType = (e: MouseEvent<HTMLUListElement>) => {
+  const onChangeType: MouseEventHandler<HTMLUListElement> = (e) => {
     const target = e.target as HTMLUListElement;
     const type = target.dataset['value'];
 
