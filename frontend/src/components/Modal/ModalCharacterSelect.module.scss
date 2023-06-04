@@ -1,0 +1,21 @@
+.character-select-container {
+  @include display-flex($direction: column, $justify: center, $align: center);
+  width: calc(100% - 160px);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  span {
+    @include font($size: $display, $weight: bold);
+    text-shadow: -1px 0 $white, 0 1px $white, 1px 0 $white, 0 -1px $white;
+    font-family: 'DeliusUnicase';
+
+    position: absolute;
+    bottom: 100%;
+  }
+
+  .character {
+    @include display-flex($direction: row, $justify: space-between, $align: center);
+    width: 100%;
+  }
+}

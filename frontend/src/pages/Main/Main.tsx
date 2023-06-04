@@ -4,6 +4,7 @@ import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { Logo } from '@/components/Logo';
 import { Modal } from '@/components/Modal';
+import ModalCharactorSelect from '@/components/Modal/ModalCharactorSelect';
 import { MODAL_ASSETS } from '@/constants';
 import useModal from '@/hooks/useModal';
 import { getImageLoader } from '@/utils/image';
@@ -46,14 +47,7 @@ function Main() {
         START
       </Button>
       <Modal isOpen={isOpen} onClose={closeModal} confirm='CHOICE' onConfirm={onConfirm}>
-        <div className={styles['character-select-container']}>
-          <span>MORT</span>
-          <div className={styles['character']}>
-            <Button type='arrow-left' width={84} height={84} />
-            <img src='/assets/dinoSprites-mort.png' width='auto' height={300} alt='dino' />
-            <Button type='arrow-right' width={84} height={84} />
-          </div>
-        </div>
+        <ModalCharactorSelect />
       </Modal>
     </div>
   );

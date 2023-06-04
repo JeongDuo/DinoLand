@@ -9,4 +9,10 @@
   border: none;
   width: 250px;
   height: 80px;
+
+  transition: filter 0.3s ease-in-out;
+
+  &:hover {
+    filter: drop-shadow(0px 2px 10px rgba(0, 0, 0, 0.6));
+  }
 }
